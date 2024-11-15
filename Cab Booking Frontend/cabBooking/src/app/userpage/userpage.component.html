@@ -1,0 +1,69 @@
+<nav class="navbar">
+    <div class="containerr">
+      <div class="navbar-brand">
+
+        <span>Cab Booking System</span>
+      </div>
+
+      <div class="nav-actions">
+        <span>Hi {{username}} </span>
+        
+        <span class="nav-item" (click)="logout()">Logout</span>
+        
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="background">
+  
+    <br>
+        <h2 style="text-align: center; color: rgb(20, 92, 169);"> <em> Welcome to  User Dashboard</em></h2>
+    <br>
+        
+        <br>
+        <br>
+        
+            <div class="btn-container">
+    
+            
+             
+
+              <div  class="card text-center" style="width: 18rem;">
+                <div style="background-color: rgba(0, 0, 0, 0.74); border-radius: 10px;" class="card-body">
+                  <img class="card-img-top" height="63%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf8llXVKxufik-Y4nRL-lbs09J1WNP2E2x_A&s" >
+               
+                  <p  style="color:white;" class="card-text">Hi, You can book your cab</p>
+                  <div style="margin-right: 30%;" >
+                    
+                  <a  (click)="addBooking()"class="btn btn-primary">Add Booking</a>
+                </div>
+                </div>
+              </div>
+
+              <div  class="card text-center" style="width: 18rem;">
+                <div style="background-color: rgba(0, 0, 0, 0.74); border-radius: 10px;" class="card-body">
+                  <img class="card-img-top" height="63%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf8llXVKxufik-Y4nRL-lbs09J1WNP2E2x_A&s" >
+               
+                  <p  style="color:white;" class="card-text">Hi, You can book your cab</p>
+                  <div style="margin-right: 30%;" >
+                    
+                  <a  (click)="viewBooking()"class="btn btn-primary">View Bookings</a>
+                </div>
+                </div>
+              </div>
+
+             
+             
+            </div>
+          
+           
+
+          <br>
+          <br>
+          <br>
+        <br>
+        <br>
+      
+      
+    </div>

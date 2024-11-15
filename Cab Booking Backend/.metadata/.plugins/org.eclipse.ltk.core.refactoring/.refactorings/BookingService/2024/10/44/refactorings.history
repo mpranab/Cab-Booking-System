@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.bookingService.entity.BookingDetails.java&apos; to &apos;BookingDetail.java&apos;&#x0D;&#x0A;- Original project: &apos;BookingService&apos;&#x0D;&#x0A;- Original element: &apos;com.bookingService.entity.BookingDetails.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.bookingService.entity.BookingDetail.java&apos;" description="Rename compilation unit &apos;BookingDetails.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.bookingService.entity{BookingDetails.java" name="BookingDetail.java" references="false" stamp="1730279763681" version="1.0"/>
+</session>

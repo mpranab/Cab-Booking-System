@@ -1,0 +1,5 @@
+package com.userService.service;
+
+public class UserServiceImplTest {
+
+}

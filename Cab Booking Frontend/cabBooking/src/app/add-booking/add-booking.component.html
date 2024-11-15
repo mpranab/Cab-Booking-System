@@ -1,0 +1,77 @@
+<div class="container">
+    <h2>Add New Booking</h2>
+  
+    <form (ngSubmit)="addBooking()">
+      <div class="form-group">
+        <label for="pickupPoint">Pickup Point:</label>
+        <input type="text" id="pickupPoint" [(ngModel)]="booking.pickupPoint" name="pickupPoint" class="form-control" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="dropPoint">Drop Point:</label>
+        <input type="text" id="dropPoint" [(ngModel)]="booking.dropPoint" name="dropPoint" class="form-control" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="pickupDate">Pickup Date:</label>
+        <input type="date" id="pickupDate" [(ngModel)]="booking.pickupDate" name="pickupDate" class="form-control" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="pickupTime">Pickup Time:</label>
+        <input type="time" id="pickupTime" [(ngModel)]="booking.pickupTime" name="pickupTime" class="form-control" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="dropDate">Drop Date:</label>
+        <input type="date" id="dropDate" [(ngModel)]="booking.dropDate" name="dropDate" class="form-control" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="dropTime">Drop Time:</label>
+        <input type="time" id="dropTime" [(ngModel)]="booking.dropTime" name="dropTime" class="form-control" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="carId">Car ID:</label>
+        <input type="number" id="carId" [(ngModel)]="booking.carId" name="carId" class="form-control" required>
+      </div>
+  
+      <!-- User Details -->
+      <div *ngFor="let user of booking.user; let i = index">
+        <h3>User {{ i + 1 }}</h3>
+        <div class="form-group">
+          <label for="firstName{{i}}">First Name:</label>
+          <input type="text" id="firstName{{i}}" [(ngModel)]="user.firstName" [name]="'firstName' + i" class="form-control" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="lastName{{i}}">Last Name:</label>
+          <input type="text" id="lastName{{i}}" [(ngModel)]="user.lastName" [name]="'lastName' + i" class="form-control" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="phoneNumber{{i}}">Phone Number:</label>
+          <input type="number" id="phoneNumber{{i}}" [(ngModel)]="user.phoneNumber" [name]="'phoneNumber' + i" class="form-control" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="email{{i}}">Email:</label>
+          <input type="email" id="email{{i}}" [(ngModel)]="user.email" [name]="'email' + i" class="form-control" required>
+        </div>
+      </div>
+  
+      <button type="button" (click)="addUser()" class="btn btn-secondary">Add User</button>
+  
+      <button type="submit" class="btn btn-primary">Add Booking</button>
+    </form>
+  
+    <div *ngIf="successMessage" class="alert alert-success mt-3">
+      {{ successMessage }}
+    </div>
+  
+    <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+      {{ errorMessage }}
+    </div>
+  </div>
+  

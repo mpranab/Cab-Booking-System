@@ -1,0 +1,49 @@
+<h2>Add New Cab</h2>
+
+<form (ngSubmit)="addCab()">
+  <div class="form-group">
+    <label>Car Number:</label>
+    <input type="text" [(ngModel)]="newCar.carNumber" name="carNumber" required />
+  </div>
+
+  <div class="form-group">
+    <label>Category:</label>
+    <select [(ngModel)]="newCar.carCategory" name="carCategory">
+      <option *ngFor="let category of carCategories" [value]="category">{{ category }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Rate Per Hour:</label>
+    <input type="number" [(ngModel)]="newCar.rateHour" name="rateHour" required />
+  </div>
+
+  <div class="form-group">
+    <label>Available:</label>
+    <input type="checkbox" [(ngModel)]="newCar.available" name="available" />
+  </div>
+
+  <h3>Driver Information</h3>
+
+  <div class="form-group">
+    <label>Driver ID:</label>
+    <input type="number" [(ngModel)]="newCar.driver.driverId" name="driverId" />
+  </div>
+
+  <div class="form-group">
+    <label>Driver Name:</label>
+    <input type="text" [(ngModel)]="newCar.driver.name" name="name" />
+  </div>
+
+  <div class="form-group">
+    <label>Mobile Number:</label>
+    <input type="number" [(ngModel)]="newCar.driver.mobNumber" name="mobNumber" />
+  </div>
+
+  <div class="form-group">
+    <label>License Number:</label>
+    <input type="text" [(ngModel)]="newCar.driver.licenseNo" name="licenseNo" />
+  </div>
+
+  <button type="submit">Add Cab</button>
+</form>

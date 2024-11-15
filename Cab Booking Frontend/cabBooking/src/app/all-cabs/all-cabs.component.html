@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>All Cabs</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Car ID</th>
+          <th>Car Number</th>
+          <th>Category</th>
+          <th>Rate/Hour</th>
+          <th>Available</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let car of cars">
+          <td>{{ car.carId }}</td>
+          <td>{{ car.carNumber }}</td>
+          <td>{{ car.carCategory }}</td>
+          <td>{{ car.rateHour }}</td>
+          <td>{{ car.available ? 'Yes' : 'No' }}</td>        
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

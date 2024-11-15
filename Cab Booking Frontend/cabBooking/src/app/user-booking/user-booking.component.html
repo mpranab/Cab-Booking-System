@@ -1,0 +1,40 @@
+<div class="booking-container">
+    <h2>User Bookings</h2>
+  
+    <form (ngSubmit)="getBookings()">
+      <div>
+        <label for="firstName">First Name:</label>
+        <input type="text" [(ngModel)]="firstName" name="firstName" required placeholder="Enter first name" />
+      </div>
+      <div>
+        <label for="lastName">Last Name:</label>
+        <input type="text" [(ngModel)]="lastName" name="lastName" required placeholder="Enter last name" />
+      </div>
+      <button type="submit">Fetch Bookings</button>
+    </form>
+  
+    <div *ngIf="errorMessage" class="error-message">
+      <p>{{ errorMessage }}</p>
+    </div>
+  
+    <div *ngIf="bookings.length > 0; else noBookings">
+      <ul>
+        <li *ngFor="let booking of bookings">
+          <p><strong>Booking ID:</strong> {{ booking.bookingId }}</p>
+          <p><strong>Pickup Point:</strong> {{ booking.pickupPoint }}</p>
+          <p><strong>Drop Point:</strong> {{ booking.dropPoint }}</p>
+          <p><strong>Pickup Date:</strong> {{ booking.pickupDate }}</p>
+          <p><strong>Drop Date:</strong> {{ booking.dropDate }}</p>
+          <p><strong>Pickup Time:</strong> {{ booking.pickupTime }}</p>
+          <p><strong>Drop Time:</strong> {{ booking.dropTime }}</p>
+          <p><strong>CarId:</strong> {{ booking.carId }}</p>
+
+        </li>
+      </ul>
+    </div>
+  
+    <ng-template #noBookings>
+      <p>No bookings found for the given user.</p>
+    </ng-template>
+  </div>
+  
